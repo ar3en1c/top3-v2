@@ -1,0 +1,57 @@
+$dark : #343541;
+
+@font-face {
+    font-family: "Yekan";
+    src: url("./Yekan.ttf")
+}
+
+@mixin font3 {
+    font-family: 'Yekan', sans-serif;
+}
+
+.footer {
+    width: 100%;
+    background-color: $dark;
+    float: right;
+    margin-top: 30px;
+}
+
+.copyright {
+    display: flex;
+    float: right;
+    justify-content: center;
+    color: white;
+    @include font3();
+    width: 90%;
+    margin: 15px 5%;
+}
+
+.insta {
+    color: white;
+    width: 90%;
+    margin: 20px 5%;
+    float: right;
+    display: flex;
+    justify-content: center;
+
+    svg {
+        width: 30px !important;
+        height: 30px !important;
+        cursor: pointer;
+
+        &:hover {
+            color: red;
+        }
+    }
+
+    a {
+        &:link {
+            color: white;
+
+        }
+        &:visited{
+            color: white;
+        }
+    }
+
+}

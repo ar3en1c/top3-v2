@@ -1,0 +1,87 @@
+@font-face {
+    font-family: Yekan;
+    src: url(./Yekan.ttf);
+}
+
+@mixin font1() {
+    font-family: Yekan, sans-serif;
+}
+
+@font-face {
+    font-family: Blueberry;
+    src: url(./Blueberry.ttf);
+}
+
+@mixin font2() {
+    font-family: Blueberry, sans-serif;
+}
+
+.cart {
+    width: 80%;
+    background-color: #6b6b6b;
+    margin: 30px 10%;
+    float: right;
+    border-radius: 5px;
+
+    &-title {
+        color: white;
+        margin: 10px 0;
+        float: left;
+        text-align: center;
+        width: 100%;
+        @include font2();
+        -webkit-text-stroke: 0.6px darkred;
+
+    }
+
+    &-base {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 450px) {
+            flex-wrap: wrap;
+        }
+
+        &-char {
+            margin: 10px 5%;
+            width: 30%;
+            height: 500px;
+            @media screen and (max-width: 1280px) {
+                height: 350px;
+            }
+
+            /* border: 2px solid white; */
+            text-align: center;
+            @include font2();
+            border-radius: 3px;
+            user-select: none;
+
+            @media screen and (max-width: 450px) {
+                width: 80%;
+                margin: 20px 10%;
+            }
+
+            a {
+                cursor: pointer;
+                color: white;
+                -webkit-text-stroke: 0.6px #0A3A9E;
+
+                &:hover {
+                    color: red !important;
+                }
+
+                &:visited {
+                    color: white;
+                    -webkit-text-stroke: 0.6px #0A3A9E;
+                }
+            }
+        }
+    }
+}
+
+.main-div {
+    float: right;
+    width: 100%;
+}
